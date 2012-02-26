@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.odjazdy {
+	width: 95%;
+	border-collapse: collapse;
+	margin-bottom: 5px;
+}
+
+.odjazdy td{
+	padding: 2px;
+	border: 1px solid black;
+	vertical-align: top;
+}
+
+.odjazdy th{
+	padding: 2px;
+	border: 1px solid black;
+	text-align: left;
+	background: lightblue;
+}
+
+.odjazdyHeader {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.informacje {
+	float: left;
+	margin-bottom: 3px;
+	padding: 0px;
+	width: 95%;
+}
+
+.linia {
+	text-align: center;
+	width: 10%;
+	font-size: 62pt;
+	border: 1px solid black;
+	padding: 5px;
+	width: 100px;
+	height: 100px;
+}
+
+td.przystanek {
+	font-size: 18pt;
+	vertical-align: top;
+}
+
+.przystanek {
+	font-size: 10px;
+}
+
+.legenda {
+	font-family: monospace;
+}
+
+#logoimg {
+	float: right;
+	padding: 5px;
+}
+
+#footer {
+  margin-top: 10px;
+}
+
+td.legenda {
+  width: 40%;
+  vertical-align: top; 
+  border-right: 1px solid black; 
+  border-bottom: 1px solid black; 
+  padding-right: 2px;
+}
+td.trasa {
+  width: 60%; 
+  vertical-align: top; 
+  padding: 0 2px; 
+  border-bottom: 1px solid black;
+}

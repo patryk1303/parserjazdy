@@ -1,0 +1,110 @@
+﻿#navigation_bar {
+	background: #F29729;
+	color: white;
+	padding: 10px 10px 0 10px;
+	border-bottom: 2px solid red;
+}
+
+#navigation_bar ul {
+	color: white;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+}
+
+#navigation_bar ul li {
+	float: left;
+	padding: 0 0 10px 0;
+	position: relative;
+}
+
+#navigation_bar ul a{
+	float: left;
+	height: 25px;
+	padding: 0 10px;
+	color: white;
+	text-decoration: none;
+}
+
+#navigation_bar ul li:hover >a{
+	color: #f0f0aa;
+}
+
+*html #navigation_bar ul  li a:hover{ /* IE6 */
+	color: #f0f0aa;
+}
+
+#navigation_bar ul li:hover > ul{
+	display: block;
+}
+
+/* Sub-menu */
+
+#navigation_bar ul ul{
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 25px;
+	left: -20px;
+	z-index: 999999;
+	background: #D65C24;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #808080;
+}
+
+#navigation_bar ul ul ul{
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 240px;
+	z-index: 999999;
+	background: #D65C24;
+	border-radius: 10px;
+}
+
+#navigation_bar ul ul li{
+	float: none;
+	display: block;
+}
+
+#navigation_bar ul ul a{
+	padding: 10px;
+	height: auto;
+	line-height: 1;
+	display: block;
+	white-space: nowrap;
+	float: none;
+	color: black;
+}
+
+*html #navigation_bar ul ul a{ /* IE6 */
+	height: 10px;
+	width: 150px;
+}
+
+*:first-child+html #navigation_bar ul ul a{ /* IE 7 */
+	height: 10px
+	width: 150px;
+}
+
+#navigation_bar ul  ul a:hover{
+	color: #00aaff;;
+}
+
+#navigation_bar ul:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+*html #navigation_bar ul {
+	zoom: 1:
+}
+
+*:first-child+html #navigation_bar ul {
+	zoom: 1
+}

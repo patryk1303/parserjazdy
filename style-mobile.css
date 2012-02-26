@@ -1,0 +1,97 @@
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+#main {
+	width: 100%;
+	float: left;
+}
+
+.linie {
+	/*border-collapse: collapse;*/
+	width: 100%;
+}
+.linie td {
+	border: 1px solid black;
+	padding: 3px;
+	border-radius: 10px;
+	text-align: center;
+	background-image: linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -o-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -moz-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -webkit-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -ms-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+}
+.linie td a {
+	display: block;
+	font-size: 1.5em;
+}
+
+.odjazdy {
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.odjazdy td {
+	border: 1px solid black;
+	padding: 2px;
+	vertical-align: top;
+}
+
+.odjazdy td.godzina {
+	border: 1px solid black;
+	padding: 2px;
+	vertical-align: top;
+	background: lightblue;
+	width: 20px;
+}
+
+.odjazdy th {
+	border: 1px solid black;
+	background: lightblue;
+	padding: 2px;
+	min-width: 50px;
+}
+
+.przystanek a {
+	display: block;
+	width: 100%;
+	border: 1px solid black;
+	margin-top: 2px;
+  	border: 1px solid black;
+	padding: 3px;
+	border-radius: 10px;
+	background-image: linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -o-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -moz-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -webkit-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -ms-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+}
+
+.kierunki a {
+	display: block;
+	width: 100%;
+	margin-bottom: 1px;
+	border: 1px solid black;
+	padding: 3px;
+	border-radius: 10px;
+	background-image: linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -o-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -moz-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -webkit-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -ms-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	
+}
+
+.linia {
+		border: 1px solid black;
+	padding: 3px;
+	border-radius: 10px;
+	background-image: linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -o-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -moz-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -webkit-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+	background-image: -ms-linear-gradient(bottom, rgb(138,138,138) 37%, rgb(156,156,156) 69%);
+}

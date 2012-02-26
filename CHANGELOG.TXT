@@ -1,0 +1,31 @@
+26022012, wersja 2 - 26.02.2012
+- linie s¹ automatycznie wyczytywane po folderach w folderze "rozklad"
+
+26022012 - 26.02.2012
+- lekka zmiana szablonu wersji mobilnej
+- dodanie zmiennej $rok, która jest wyœwietlana w stopce
+- poprawka szablonu strony g³ównej
+- poprawka wyœwietlania tabeli linii w wersji mobilnej
+- przenisienie listy linii z macierzy do pliku "rozklad/linie"
+
+20022012 - 20.02.2012
+- zmiana stopki - jest teraz funkcj¹
+- poprawki w wersji mobilnej - kod oraz CSS
+
+19022012 - 19.02.2012
+- zmianie ulega numeracja wersji
+- uporz¹dkowanie kodu
+- nowe funkcjonalnoœci:
+	* nowy sposób wyœwietlania rozk³adów jazdy
+	* nowy sposob wyœwietlania wydruku
+	* mo¿liwoœæ wydruku rozk³adu dla ca³ego kierunku
+	* jeœli nie ma odjazdów w danym dniu - rozk³ad nie jest wyœwietlany
+- nowy layout
+- du¿o innych rzeczy, których nie pamiêtam
+
+0.2 - 25-10-2011
+- ZMIANA: teraz typy dni nie s¹ sztywno okreœlone na 3, lecz ich iloœæ zale¿y od pliku typy_dni
+- ZMIANA: funkcja wyswietl_odjazdy() siê zmieni³a. Ostatni jej parametr jest zwi¹zany z ³amaniem iloœci odjazdów w wierszu tabeli 
+
+0.1  - 23-10-2011
+- Pierwsza wersja

@@ -4,8 +4,8 @@
 	$rok = "1997 - 2012";
 	$sciezka = dirname(__FILE__); //œcie¿ka g³ówna do plików
 	$rozklady = $sciezka.'/rozklad'; //œcie¿ka do foledu rozk³adów
-	$rozklady_folder = opendir($rozklady); //otwiera folder rozk³adów, nieu¿ywane
-	$linie = file($rozklady.'/linie');
+	$rozklady_folder = '/rozklad'; //otwiera folder rozk³adów, nieu¿ywane
+	$linie = getLinie($rozklady);
   
 	if (!isset($_GET['linia']))      $_GET['linia']      = 0 ; //jeœli linia niewybrana - zmieñ wartoœæ na 0 (false)
 	if (!isset($_GET['kierunek']))   $_GET['kierunek']   = 0 ; //jeœli kierunek niewybrany - zmieñ wartoœæ na 0 (false)
@@ -34,6 +34,21 @@
 			$plik_legenda_sciezka = $rozklady.'/'.$wLinia.'/legenda';
 		} //zakoñczenie po wyborze kierunku
 	} //zakoñczenie po wyborze linii
+	
+	// deklaracja funkcji
+
+	function getLinie($rozklady)
+	{
+		$linie = array();
+		foreach (glob($rozklady.'/*',GLOB_ONLYDIR) as $folder)
+		{
+			$folder = explode('\\',$folder);
+			$folder = explode('/',$folder[count($folder)-1]);
+			$linie[] = $folder[count($folder)-1];
+		}
+		sort($linie,SORT_NUMERIC);
+		return $linie;
+	}
 	
 	function pokazLinie($linie,$mobile=false,$lamanie=4) //pokazuje linie w formie listy
 	{

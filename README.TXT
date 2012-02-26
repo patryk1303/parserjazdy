@@ -1,5 +1,5 @@
-Parser Jazdy 260212
-26.02.2012	Patryk Wychowaniec
+Parser Jazdy 260212, wersja 2
+26.02.2012, wersja 2	Patryk Wychowaniec
 
 Plik "czytaj mnie" internetowej aplikacji wyswietlaj¹cej rozk³ad jazdy formatu plików jazdy.net
 
@@ -32,7 +32,7 @@ Aplikacja korzysta z formatu danych rozk³adów jazdy jazdy.net
 	a) umieszczenie rozk³adów jazdy:
 		foldery oraz pliki rozk³adów nale¿y umieœciæ w podfolderze "rozklad"
 	b) lista wyœwietlanych wyœwietlanie linii:
-		modyfilkacja pliku "linie" znajduj¹cego siê w podfolderze "rozklad"
+		linie s¹ automatycznie wyczytywane po folderach w folderze "rozklad"
 	c) iloœæ kierunków:
 		skrypt automatycznie znajduje iloœæ kierunków. Niepotrzebna jest modyfikacja plików do obs³ugi wiêkszej iloœci
 	d) typy dni:

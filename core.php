@@ -2,22 +2,22 @@
 	$firma = "MZK Koszalin";	//nazwa firmy	
 	$adres = "http://mzk.koszalin.pl";
 	$rok = "1997 - 2012";
-	$sciezka = dirname(__FILE__); //ï¿½cieï¿½ka gï¿½ï¿½wna do plikï¿½w
-	$rozklady = $sciezka.'/rozklad'; //ï¿½cieï¿½ka do foledu rozkï¿½adï¿½w
-	$rozklady_folder = '/rozklad'; //otwiera folder rozkï¿½adï¿½w, nieuï¿½ywane
+	$sciezka = dirname(__FILE__); //œcie¿ka g³ówna do plików
+	$rozklady = $sciezka.'/rozklad'; //œcie¿ka do foledu rozk³adów
+	$rozklady_folder = '/rozklad'; //otwiera folder rozk³adów, nieu¿ywane
 	$linie = getLinie($rozklady);
   
-	if (!isset($_GET['linia']))      $_GET['linia']      = 0 ; //jeï¿½li linia niewybrana - zmieï¿½ wartoï¿½ï¿½ na 0 (false)
-	if (!isset($_GET['kierunek']))   $_GET['kierunek']   = 0 ; //jeï¿½li kierunek niewybrany - zmieï¿½ wartoï¿½ï¿½ na 0 (false)
-	if (!isset($_GET['przystanek'])) $_GET['przystanek'] = 0 ; //jeï¿½li przystanek niewybrany - zmieï¿½ wartoï¿½ï¿½ na 0 (false)
-	if (!isset($_GET['lamanie']))    $_GET['lamanie']    = 5; //jeï¿½li ï¿½amanie niezdefiniowane - zmieï¿½ wartoï¿½ï¿½ na 5
+	if (!isset($_GET['linia']))      $_GET['linia']      = 0 ; //jeœli linia niewybrana - zmieñ wartoœæ na 0 (false)
+	if (!isset($_GET['kierunek']))   $_GET['kierunek']   = 0 ; //jeœli kierunek niewybrany - zmieñ wartoœæ na 0 (false)
+	if (!isset($_GET['przystanek'])) $_GET['przystanek'] = 0 ; //jeœli przystanek niewybrany - zmieñ wartoœæ na 0 (false)
+	if (!isset($_GET['lamanie']))    $_GET['lamanie']    = 5; //jeœli ³amanie niezdefiniowane - zmieñ wartoœæ na 5
 	
 	$wLinia      = $_GET['linia'];
 	$wKierunek   = $_GET['kierunek'];
 	$wPrzystanek = $_GET['przystanek'];
 	$wLamanie    = $_GET['lamanie'];
 	
-	$typy_dni_plik = $rozklady.'/typy_dni'; //otwiera plik typï¿½w dni - bï¿½dzie to pokazane przy odjazdach
+	$typy_dni_plik = $rozklady.'/typy_dni'; //otwiera plik typów dni - bêdzie to pokazane przy odjazdach
 	$typy_dni = file($typy_dni_plik); // [0] - powszednie [1] - soboty [2] - niedziele
 	$typy_dni_ilosc = count($typy_dni);
 	
@@ -32,8 +32,8 @@
 			}
 			$plik_przystanki= file($rozklady.'/'.$wLinia.'/przystanki_'.$wKierunek);
 			$plik_legenda_sciezka = $rozklady.'/'.$wLinia.'/legenda';
-		} //zakoï¿½czenie po wyborze kierunku
-	} //zakoï¿½czenie po wyborze linii
+		} //zakoñczenie po wyborze kierunku
+	} //zakoñczenie po wyborze linii
 	
 	// deklaracja funkcji
 
@@ -80,14 +80,14 @@
 		}
 	}
 	
-	function wybranaLinia() //pokazuje nr wybranej linii, jeï¿½li linia niewybrana - pokazuje napis dot. wyboru linii
+	function wybranaLinia() //pokazuje nr wybranej linii, jeœli linia niewybrana - pokazuje napis dot. wyboru linii
 	{
 		global $wLinia;
 		if ($wLinia)
 			echo "Wybrana linia: <span class=\"linia\">".$wLinia."</span>";
 		else
 			{
-				echo "Proszï¿½ wybraï¿½ liniï¿½";
+				echo "Proszê wybraæ liniê";
 			}
 	}
 
@@ -107,7 +107,7 @@
     
 	}
 	
-	function wyswietlPrzystanki($wybrana_linia, $wybrany_kierunek, $plik_przystanki, $styl=1) //wyï¿½wietla przystanki wybranego kierunku
+	function wyswietlPrzystanki($wybrana_linia, $wybrany_kierunek, $plik_przystanki, $styl=1) //wyœwietla przystanki wybranego kierunku
 	{
 		global $wPrzystanek;
 		if ($styl == 1)	// wersja normalna
@@ -158,10 +158,10 @@
 						
 			for ($i=0; $i<$typy_dni_ilosc; $i++)
 			{
-				$odjazdy[$i] = preg_split("/ /",$plik_dnia[$i][$wPrzystanek]); //przekazuje osobne godziny odjazdï¿½w do macierzy
+				$odjazdy[$i] = preg_split("/ /",$plik_dnia[$i][$wPrzystanek]); //przekazuje osobne godziny odjazdów do macierzy
 			}
 			
-			//ma byï¿½ tak: $odjazdy[typ_dnia][godzina][minuta]
+			//ma byæ tak: $odjazdy[typ_dnia][godzina][minuta]
 			for ($i=0; $i<$typy_dni_ilosc; $i++)
 			{
 				for ($j=0;$j<count($odjazdy[$i]);$j++)
@@ -190,7 +190,7 @@
 					}
 					$godziny = array_unique($godziny);
 					if (count($godziny)!=0) echo '<table border="0" class="odjazdy">'; //start tabeli z odjazdami
-						if (count($godziny)!=0) echo '<tr><th colspan="'.count($godziny).'"><span class="odjazdyHeader">'.$typy_dni[$i].':</span></th></tr>';	//wyï¿½wietlenie typu dnia
+						if (count($godziny)!=0) echo '<tr><th colspan="'.count($godziny).'"><span class="odjazdyHeader">'.$typy_dni[$i].':</span></th></tr>';	//wyœwietlenie typu dnia
 					echo '<tr>';
 					if (count($godziny)!=0)
 						foreach($godziny as $godz)
@@ -206,7 +206,7 @@
 								{
 									if($odjazdy[$i][$j][0] == strval($godz))
 										$minuty[] = $odjazdy[$i][$j][1];
-									//ma byï¿½ tak: $odjazdy[typ_dnia][godzina][minuta]
+									//ma byæ tak: $odjazdy[typ_dnia][godzina][minuta]
 								}
 								for($j=0;$j<count($minuty);$j++)
 									echo $minuty[$j]."<br>";
@@ -239,7 +239,7 @@
 					if (count($godziny)!=0)
 					{
 						echo '<table border="0" class="odjazdy">'; //start tabeli z odjazdami
-							echo '<tr>'; //gï¿½ï¿½wek typï¿½w dnia
+							echo '<tr>'; //g³ówek typów dnia
 								echo '<th colspan="2">'.$typy_dni[$i].'</th>';
 							echo '</tr>';
 							
@@ -253,7 +253,7 @@
 										{
 											if($odjazdy[$i][$j][0] == strval($godz))
 												$minuty[] = $odjazdy[$i][$j][1];
-											//ma byï¿½ tak: $odjazdy[typ_dnia][godzina][minuta]
+											//ma byæ tak: $odjazdy[typ_dnia][godzina][minuta]
 										}
 										echo '<td>';
 											for($j=0;$j<count($minuty);$j++)
@@ -297,7 +297,7 @@
 	global $rok;
     
     echo "&copy; $firma $rok<br>";
-		echo "Dane rozkï¿½adï¿½w pochozï¿½ ze strony <a href=\"$adres\">$firma</a>";
+		echo "Dane rozk³adów pochoz¹ ze strony <a href=\"$adres\">$firma</a>";
     
   }
 ?>

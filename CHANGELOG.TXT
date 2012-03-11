@@ -1,5 +1,5 @@
-26022012, wersja 2 - 26.02.2012
-- linie s¹ automatycznie wyczytywane po folderach w folderze "rozklad"
+??032012 - ??.03.2012
+- zintegrowanie skryptu z systemem szablonów Smarty
 
 26022012 - 26.02.2012
 - lekka zmiana szablonu wersji mobilnej

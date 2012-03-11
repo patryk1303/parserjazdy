@@ -1,7 +1,4 @@
 <?php
-	$firma = "MZK Koszalin";	//nazwa firmy	
-	$adres = "http://mzk.koszalin.pl";
-	$rok = "1997 - 2012";
 	$sciezka = dirname(__FILE__); //œcie¿ka g³ówna do plików
 	$rozklady = $sciezka.'/rozklad'; //œcie¿ka do foledu rozk³adów
 	$rozklady_folder = '/rozklad'; //otwiera folder rozk³adów, nieu¿ywane
@@ -10,7 +7,7 @@
 	if (!isset($_GET['linia']))      $_GET['linia']      = 0 ; //jeœli linia niewybrana - zmieñ wartoœæ na 0 (false)
 	if (!isset($_GET['kierunek']))   $_GET['kierunek']   = 0 ; //jeœli kierunek niewybrany - zmieñ wartoœæ na 0 (false)
 	if (!isset($_GET['przystanek'])) $_GET['przystanek'] = 0 ; //jeœli przystanek niewybrany - zmieñ wartoœæ na 0 (false)
-	if (!isset($_GET['lamanie']))    $_GET['lamanie']    = 5; //jeœli ³amanie niezdefiniowane - zmieñ wartoœæ na 5
+	if (!isset($_GET['lamanie']))    $_GET['lamanie']    = 5; //jeœli ³amanie niezdefiniowane - zmieñ wartoœæ na 1
 	
 	$wLinia      = $_GET['linia'];
 	$wKierunek   = $_GET['kierunek'];
@@ -280,12 +277,12 @@
 			echo '<div class="legenda">';
 			if ($napis)
 				echo '<span class="odjazdyHeader">Legenda:</span><br>';
-				for ($i=0; $i<count($plik_legenda); $i++)
-				{
-					echo $plik_legenda[$i];
-					if ($i<count($plik_legenda)-1)
-						echo $separator;
-				}
+			for ($i=0; $i<count($plik_legenda); $i++)
+			{
+				echo $plik_legenda[$i];
+				if ($i<count($plik_legenda)-1)
+					echo $separator;
+			}
 			echo '</div>';
 		}
 	}

@@ -1,5 +1,5 @@
-Parser Jazdy 260212, wersja 2
-26.02.2012, wersja 2	Patryk Wychowaniec
+Parser Jazdy 180312
+18.03.2012	Patryk Wychowaniec
 
 Plik "czytaj mnie" internetowej aplikacji wyswietlaj¹cej rozk³ad jazdy formatu plików jazdy.net
 
@@ -39,6 +39,10 @@ Aplikacja korzysta z formatu danych rozk³adów jazdy jazdy.net
 		oskrypt automatycznie znajduje iloœæ typó dni. Niepotrzebna jest modyfikacja plików do obs³ugi wiêkszej iloœci
 	e) legenda:
 		w przeciwieñstwie do formatu jazdy.net, tutaj jest podzia³ legendy co do kierunku. W zale¿noœci od numeru kierunku, plik legendy przyjmuje nazwê "legenda_$kierunkek"
+	f) szablon:
+		nazwa szablonu jest w zmiennej $template_name w pliku config.php
+	g) konfiguracja skryptu:
+		wszystkie dane do konfiguracji znajduj¹ siê w pliku config.php
 
 ----------
 4. Informacje dodakowe
@@ -53,17 +57,20 @@ Do projektu do³¹czam rozk³ad jazdy dla Koszalina na stan od dnia 16.01.2012
 	gg:    9534554
 
 ---------
-6. Szablon HTML
+6. Szablony HTML
 
-Szablon jest w³asnej roboty, udostêpniony na licencji CC BY 3.0
-http://creativecommons.org/licenses/by/3.0/
+	a) first-template
+		Szablon jest w³asnej roboty, udostêpniony na licencji CC BY 3.0
+		http://creativecommons.org/licenses/by/3.0/
 
-Wolno:
+		Wolno:
 
-	kopiowaæ, rozpowszechniaæ, odtwarzaæ i wykonywaæ utwór
-	tworzyæ utwory zale¿ne
-	u¿ytkowaæ utwór w sposób komercyjny
+			kopiowaæ, rozpowszechniaæ, odtwarzaæ i wykonywaæ utwór
+			tworzyæ utwory zale¿ne
+			u¿ytkowaæ utwór w sposób komercyjny
 
-Na nastêpuj¹cych warunkach:
+		Na nastêpuj¹cych warunkach:
 
-	Uznanie autorstwa — Utwór nale¿y oznaczyæ w sposób okreœlony przez Twórcê lub Licencjodawcê 
+			Uznanie autorstwa — Utwór nale¿y oznaczyæ w sposób okreœlony przez Twórcê lub Licencjodawcê 
+	b) Spicy
+		http://www.templatemo.com/preview/templatemo_314_spicy

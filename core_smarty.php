@@ -12,10 +12,14 @@
 	$smarty->assign('wLinia',$wLinia);
 	$smarty->assign('wKierunek',$wKierunek);
 	$smarty->assign('wPrzystanek',$wPrzystanek);
+	$smarty->assign('wLamanie',$wLamanie);
 	$smarty->assign('linie',$linie);
+	$smarty->assign('ilLinie',count($linie));
 
 	$smarty->assign('typy_dnia',$typy_dni);
 	$smarty->assign('typy_dnia_ilosc',$typy_dni_ilosc);
+  
+	$smarty->configLoad('templates/'.$template_name.'/temp.conf');
 
 	if ($wLinia != NULL)
 	{

@@ -6,7 +6,7 @@
 {/function}
 {function wyswietlOdjazdy_druk}
 	{php}
-		global $plik_przystanki, $plik_dnia, $wKierunek, $typy_dni, $kierunki, $typy_dni_ilosc;
+		global $plik_przystanki, $plik_dnia, $wKierunek, $typy_dni, $kierunki, $typy_dni_ilosc, $wPrzystanek;
 		wyswietlOdjazdy($plik_przystanki, $plik_dnia, $wKierunek, $typy_dni, $kierunki, $typy_dni_ilosc,0,1);
 	{/php}
 {/function}

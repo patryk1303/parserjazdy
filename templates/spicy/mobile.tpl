@@ -31,6 +31,8 @@
 		{if $wKierunek}
 			{call wyswietlOdjazdy_mobile}
 			{call pokazLegende}
+			<br>Trasa:
+			{call wyswietlPrzystanki}
 			{call pokazDruk}
 		{/if}
 	{/if}

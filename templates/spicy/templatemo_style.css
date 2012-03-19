@@ -91,7 +91,7 @@ a.more:hover { text-decoration: none; color: #000; }
 #templatemo_menu {
 	clear: both;
 	width: 220px;
-	padding: 20px 20px 20px 19px;
+	padding: 150px 20px 20px 19px;
 	margin-left: 1px;
 	background: #28241e;
 	border-top: 1px solid #1c1914;
@@ -116,7 +116,6 @@ a.more:hover { text-decoration: none; color: #000; }
 	color: #a58d6e;
 	font-weight: bold;
 	padding: 2px 0;
-	margin-bottom: 10px;
 	outline: none;
 	border: none;
 }
@@ -233,12 +232,17 @@ a.more:hover { text-decoration: none; color: #000; }
 }
 .linie li {
 	float: left;
-	padding-left: 10px;
+}
+.linie li a{
+	display: block;
+	padding: 0 5px;
+	font-size: 16px;
 }
 
 .odjazdy {
 	border-collapse: collapse;
 	width: 100%;
+	margin-bottom: 10px;
 }
 .odjazdy td {
 	border: 1px solid white;

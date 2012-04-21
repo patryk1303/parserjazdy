@@ -9,16 +9,16 @@
 	if (!isset($_GET['przystanek'])) $_GET['przystanek'] = 0 ; //jeœli przystanek niewybrany - zmieñ wartoœæ na 0 (false)
 	if (!isset($_GET['lamanie']))    $_GET['lamanie']    = 5; //jeœli ³amanie niezdefiniowane - zmieñ wartoœæ na 1
 	
-	$wLinia      = $_GET['linia'];
-	$wKierunek   = $_GET['kierunek'];
-	$wPrzystanek = $_GET['przystanek'];
-	$wLamanie    = $_GET['lamanie'];
+	$wLinia      = strip_tags($_GET['linia']);
+	$wKierunek   = strip_tags($_GET['kierunek']);
+	$wPrzystanek = strip_tags($_GET['przystanek']);
+	$wLamanie    = strip_tags($_GET['lamanie']);
 	
 	$typy_dni_plik = $rozklady.'/typy_dni'; //otwiera plik typów dni - bêdzie to pokazane przy odjazdach
 	$typy_dni = file($typy_dni_plik); // [0] - powszednie [1] - soboty [2] - niedziele
 	$typy_dni_ilosc = count($typy_dni);
 	
-	if ($wLinia != NULL)
+	if ($wLinia)
 	{
 		$kierunki = file($rozklady.'/'.$wLinia.'/kierunki');
 		if ($wKierunek)

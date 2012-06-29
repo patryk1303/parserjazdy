@@ -18,7 +18,7 @@
 		<tbody>
 			<tr>
 				<td class="linia" colspan="1" rowspan="2">{$wLinia}</td>
-				<td class="przystanek">Przystanek:<br/>&bull; {$plik_przystanki[$wPrzystanek]}</td>
+				<td class="przystanek">Przystanek:<br/>&bull; {$plik_przystanki[$wPrzystanek]|replace:"///":""}</td>
 				<td class="logoimg" colspan="1" rowspan="2"><img id="logoimg" src="logo.png" alt="MZK" /></td>
 			</tr>
 			<tr>
@@ -29,27 +29,22 @@
 	<br>
 	{if $wLinia}
 		{if $wKierunek}
-
-			{call wyswietlOdjazdy_druk}
-			
-			<table style="border-collapse: collapse;" width="95%">
-				<tr>
-					<td class="legenda">Legenda</td>
-					<td class="trasa">Trasa przejazdu</td>
-				</tr>
-				<tr>
-					<td style="vertical-align: top; border-right: 1px solid black; padding-right: 2px;">{call pokazLegende}</td>
-					<td style="vertical-align: top; padding: 0 2px;">{call wyswietlPrzystanki_druk}</td>
-				</tr>
-			</table>
+      <table style="border-collapse: collapse; width: 100%;" >
+			<tr>
+        <td>{*call wyswietlOdjazdy_druk*}</td>
+        <td class="trasa">Trasa przejazdu</td>
+			</tr>
+  		<tr>
+  			<td class="legenda">{call wyswietlOdjazdy_druk}Objaœnienia:<br>{call pokazLegende}<br>{include '../main/footer.tpl'}</td>
+  			<td class="trasa"><ul class="trasa">{call wyswietlPrzystanki_druk1}</ul></td>
+  		</tr>
+			{*<tr>
+				<td style="vertical-align: top; padding-right: 2px;" colspan="2">{call pokazLegende}</td>
+			</tr>*}
+      </table>
 
 		{/if} {*zakoñczenie po wyborze kierunku*}
 	{/if} {*zakoñczenie po wyborze linii*}
-	
-	
-	<footer id="footer">
-		{include '../main/footer.tpl'}
-	</footer>
 	
 </div>
 </body>

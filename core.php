@@ -57,7 +57,7 @@
 			if ($wyswietlKierunekPrzystanek==1)
 			{
 				echo '<span class="odjazdyHeader">Kierunek: <em>'.$kierunek_plik[$kierunek-1].'</em></span><br>';
-				echo '<span class="odjazdyHeader">Przystanek: <em>'.$plik_przystanki[$wPrzystanek].'</em></span><br><br>';
+				echo '<span class="odjazdyHeader">Przystanek: <em>'.str_replace("///", "", $plik_przystanki[$wPrzystanek]).'</em></span><br><br>';
 			}
 						
 			for ($i=0; $i<$typy_dni_ilosc; $i++)
@@ -93,31 +93,33 @@
 						}
 					}
 					$godziny = array_unique($godziny);
-					if (count($godziny)!=0) echo '<table border="0" class="odjazdy">'; //start tabeli z odjazdami
-						if (count($godziny)!=0) echo '<tr><th colspan="'.count($godziny).'"><span class="odjazdyHeader">'.$typy_dni[$i].':</span></th></tr>';	//wyœwietlenie typu dnia
-					echo '<tr>';
 					if (count($godziny)!=0)
+          {
+            echo '<table border="0" class="odjazdy">'; //start tabeli z odjazdami
+            echo '<tr><th colspan="'.count($godziny).'"><span class="odjazdyHeader">'.$typy_dni[$i].':</span></th></tr>';	//wyœwietlenie typu dnia
+  					echo '<tr>';
+          
 						foreach($godziny as $godz)
 							echo '<th width="'.(100/count($godziny)).'%">'.$godz.'</th>';
-					echo '</tr>';
-					echo '<tr>';
-						if (count($godziny)!=0)
-							foreach($godziny as $godz)
+  					echo '</tr>';
+  					echo '<tr>';
+						foreach($godziny as $godz)
+						{
+							echo '<td width="'.(100/count($godziny)).'%">';
+							$minuty = array();	//przygotowanie minut - reset macierzy
+							for($j=0;$j<count($odjazdy[$i]);$j++)
 							{
-								echo '<td width="'.(100/count($godziny)).'%">';
-								$minuty = array();	//przygotowanie minut - reset macierzy
-								for($j=0;$j<count($odjazdy[$i]);$j++)
-								{
-									if($odjazdy[$i][$j][0] == strval($godz))
-										$minuty[] = $odjazdy[$i][$j][1];
-									//ma byæ tak: $odjazdy[typ_dnia][godzina][minuta]
-								}
-								for($j=0;$j<count($minuty);$j++)
-									echo $minuty[$j]."<br>";
-									echo '</td>';
+								if($odjazdy[$i][$j][0] == strval($godz))
+									$minuty[] = $odjazdy[$i][$j][1];
+								//ma byæ tak: $odjazdy[typ_dnia][godzina][minuta]
 							}
-					echo '</tr>';
-					echo '</table>'; //koniec tabeli z odjazdami
+							for($j=0;$j<count($minuty);$j++)
+								echo $minuty[$j]."<br>";
+								echo '</td>';
+						}
+  					echo '</tr>';
+  					echo '</table>'; //koniec tabeli z odjazdami
+          }
 				}
 				//echo '</table>'; //koniec tabeli z odjazdami
 			}

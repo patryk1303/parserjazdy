@@ -13,7 +13,7 @@ a {
 }
 
 .odjazdy {
-	width: 95%;
+	width: 100%;
 	border-collapse: collapse;
 	margin-bottom: 5px;
 }
@@ -40,7 +40,7 @@ a {
 	float: left;
 	margin-bottom: 3px;
 	padding: 0px;
-	width: 95%;
+	width: 100%;
 }
 
 .linia {
@@ -56,6 +56,18 @@ a {
 td.przystanek {
 	font-size: 18pt;
 	vertical-align: top;
+}
+
+tr:first-child td.trasa {
+  font-size: large;
+}
+
+ul.trasa {
+  list-style: none url();
+}
+ul.trasa li a {
+  display: block;
+  border-bottom: 1px solid rgb(230,230,230);
 }
 
 .przystanek {
@@ -76,15 +88,12 @@ td.przystanek {
 }
 
 td.legenda {
-  width: 40%;
+  width: 75%;
   vertical-align: top; 
-  border-right: 1px solid black; 
-  border-bottom: 1px solid black; 
   padding-right: 2px;
 }
 td.trasa {
-  width: 60%; 
+  width: 25%; 
   vertical-align: top; 
   padding: 0 2px; 
-  border-bottom: 1px solid black;
 }
